@@ -1,4 +1,4 @@
-const Factory = artifacts.require('UniswapV2Factory.sol');
+const Factory = artifacts.require('PancakeFactory.sol');
 const Token1 = artifacts.require('Token1.sol');
 const Token2 = artifacts.require('Token2.sol');
 

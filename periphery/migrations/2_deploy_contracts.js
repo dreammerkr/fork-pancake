@@ -1,12 +1,12 @@
-const Router = artifacts.require('UniswapV2Router02.sol');
-const WETH = artifacts.require('WETH.sol');
+const Router = artifacts.require('PancakeRouter01.sol');
+const WETH = artifacts.require('WBNB.sol');
 
 module.exports = async function (deployer, _network, addresses) {
   let weth;
-  const FACTORY_ADDRESS = '0xE2DCeB7cFcA9CE88bCBC06b9c3e1A0C363AEAC13';
+  const FACTORY_ADDRESS = '0x0051189BcBA08406a1a7711972FDDa32ad377746';
 
   if(_network === 'mainnet') {
-    weth = await WETH.at('0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2');
+    weth = await WETH.at('0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c');
   } else {
     await deployer.deploy(WETH);
     weth = await WETH.deployed();
